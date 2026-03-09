@@ -1,4 +1,3 @@
-setwd("/Users/saliahsoares/Desktop")
 library(readr)
 ukcpr <-read.csv("ukcpr_national_welfare_data.csv")
 ukcpr2 <- ukcpr[, c("state_name",
@@ -49,7 +48,7 @@ GDP<-read.csv("GDP_per_capita.csv")
 install.packages("tidyr") 
 library(tidyr)
 library(tidyverse)
-north.america <- subset(gdp, Country.Names %in% c("United States", "Canada", "Mexico"))
+north.america <- subset(GDP, Country.Name %in% c("United States", "Canada", "Mexico"))
 north.america.1 <- north.america[, c(
   "Country.Name", "Country.Code",
   "X2000","X2001","X2002","X2003","X2004",
